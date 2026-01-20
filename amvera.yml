@@ -1,0 +1,13 @@
+meta:
+  environment: docker
+  toolchain:
+    name: docker
+build:
+  dockerfile: Dockerfile
+  skip: false
+run:
+  image: null
+  command: docker run -d -p 80:80 --name anthropic-proxy anthropic-proxy
+  args: null
+  persistenceMount: /data
+  containerPort: "80"
